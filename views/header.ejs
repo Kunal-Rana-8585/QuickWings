@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        QuickWings
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="main">
+        <div class="leftside">
+            <ul>
+                <li><img src="/icons8-twitter.gif" height="70px" class="gif"/></li>
+                <li><a href="/home"><i class="fa-solid fa-house"></i>&nbsp;&nbsp; Home</a></li>
+                <li><a href="/explore"><i class="fa-regular fa-handshake"></i>&nbsp;&nbsp; Explore</a></li>
+                <li><a href="/profile"><i class="fa-solid fa-user "></i>&nbsp;&nbsp; Profile</a></li>
+                <li><a href="/edit_profile"><i class=" fa-solid fa-user-pen"></i>&nbsp;&nbsp; Edit profile</a></li>
+                <li><a href="/changepassword"><i class="fa-solid fa-fingerprint"></i>&nbsp;&nbsp; Change password</a></li>
+                <li><a href="/logout"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp; Logout</a></li>
+            </ul>
+        </div>
+        <script>
+            var msg = "<%=msg%>";
+            if(msg != ""){
+                console.log(msg);
+            }
+        </script>

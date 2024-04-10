@@ -1,0 +1,88 @@
+<%- include('header.ejs') %>
+  <div class="home">
+    <h1 class="heading">Home</h1>
+
+    <form class="tweetpost" action="/tweet_submit" method="post" enctype="multipart/form-data">
+      <div class="tw">
+        <div>
+          <img src="/profile_pic/<%= userprofile %>" alt="profile_pic" class="profile" />
+        </div>
+        <div>
+          <textarea maxlength="250" name="post" placeholder="What's happening?" id="myTextarea"></textarea>
+        </div>
+      </div>
+
+      <div class="tw1">
+        <div><input type="file" name="tweet_img" /></div>
+        <div><input type="submit" value="Tweet" class="button" /></div>
+      </div>
+
+    </form>
+
+
+    <div class="tweet" >
+      <% for(var i=0;i<result.length ;i++){ %>
+
+        <div class="tweet_wrap">
+          <div class="leftTweet">
+            <img src="/profile_pic/<%= result[i].profilepic %>" alt="profile_pic"/>
+          </div>
+
+          <div class="rightTweet">
+            <div class="rightTweet1">
+              <div class="realname">
+                <a href="#">
+                  <%=result[i].fname%> <%=result[i].mname%> <%=result[i].lname%>
+                </a>
+              </div>
+              <div class="t_un">@<%= result[i].username %> 
+              </div>
+              <div class="dot">.</div>
+              <div class="t_time">
+                <%= months[result[i].datetime.getMonth()]%>
+                <%= result[i].datetime.getDate()%>,<%= result[i].datetime.getFullYear()%>
+                <%= result[i].datetime.getHours()%12%>:<%= result[i].datetime.getMinutes() %>
+
+                <% if(result[i].datetime.getHours()>=12) { %> 
+                  pm
+                <% } %> 
+                <% if(result[i].datetime.getHours() < 12) { %> 
+                  am
+                <% } %> 
+              </div>
+
+              <div class="delete-tweet">
+                <% if(result[i].uid === req) { %>
+                  <form action="/delete_tweet" method="post">
+                    <input type="hidden" name="tid" value="<%= result[i].tid %>">
+                    <button type="submit" class="delete-btn">&#128465;</button>
+                  </form>
+                <% } %>
+              </div>
+
+            </div>
+
+            <div class="rightTweet2 tweet_content">
+              <%= result[i].post %>
+            </div>
+            <div>
+              <% if (result[i].image_video_name) { %>
+                <% if (result[i].type === "image/jpeg" || result[i].type === "image/jpg" || result[i].type === "image/png"|| result[i].type === "image/gif") { %>
+                    <img src="uploads/<%= result[i].image_video_name %>" class="imgcontent"/>
+                <% } else{ %>
+                    <video controls class="imgcontent">
+                        <source src="/uploads/<%= result[i].image_video_name %>" >
+                        Your browser does not support the video tag.
+                    </video>
+                <% } %>
+            <% } %>
+            </div>
+          </div>
+
+        </div>
+
+        <% } %>
+    </div>
+  </div>
+
+  <%-include('trending_tags.ejs') %>

@@ -1,0 +1,27 @@
+<%- include('header.ejs') %>
+
+
+<div class="home">
+    <h1 class="explorehead">Who to follow.</h1>
+
+        <% for(var i=0; i<topUsers.length; i++) { %>
+            <div class="followbox">
+                <div class="followbox1 leftTweet">
+                    <div class="followbox11">
+                        <img src="/profile_pic/<%= topUsers[i].profilepic %>" alt="profile_pic"/>
+                    </div>
+                    <div class="followbox12">
+                        <div class="followbox21"><%= topUsers[i].fname %> <%= topUsers[i].mname %> <%= topUsers[i].lname %></div>
+                        <div class="followbox22">@<%= topUsers[i].username %></div>
+                    </div>
+                </div>
+                <div class="followbox2">
+                    <a class="followButton" href="/followsubmit?userid=<%= topUsers[i].uid %>">Follow</a>
+                </div>
+            </div>
+        <% } %>   
+</div>
+
+
+
+<%-include('trending_tags.ejs') %>

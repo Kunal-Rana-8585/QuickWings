@@ -1,0 +1,779 @@
+/* style.css */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width:thin;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    overflow: hidden;
+}
+
+.home {
+    overflow-y: scroll;
+    width: 755px;
+    border-left: 5px solid #e6ebef;
+    border-right: 5px solid #e6ebef;
+}
+
+.heading {
+    padding: 10px;
+    border-bottom: 1px solid #69646467;
+    height: 50px;
+    font-size: 24px;
+    line-height: 28px;
+    color: #131619;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tweetpost {
+    width: 100%;
+    border-bottom: 14px solid #e6ebef;
+    min-height: 130px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.profile {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+
+.tw {
+    display: flex;
+    gap: 30px;
+    align-items: start;
+    width: 100%;
+}
+
+.tw div textarea {
+    width: 520px;
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #737070;
+    border: none;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    resize: none;
+
+}
+
+.tw1 .button {
+    width: 100px;
+    height: 35px;
+    background-color: #3aa1f2;
+    border: #4bc7dd;
+    border-radius: 18px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #1292f3;
+}
+
+.tw1 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.tweet {
+    margin-top: 20px;
+    position: relative;
+}
+
+.tweet_wrap {
+    margin: 8px auto;
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    padding: 14px;
+    border-bottom: 1px solid #69646467;
+}
+
+.tweet_wrap:hover {
+    background-color: #eff3f6;
+}
+
+.leftTweet img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.rightTweet {
+    margin-top: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rightTweet1 {
+    display: flex;
+    gap: 7px;
+    align-items: baseline;
+}
+
+.tweet_content {
+    font-size: 16px;
+    line-height: 21px;
+    color: #362e2e;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.t_un,
+.t_time,
+.dot {
+    font-size: 14px;
+    font-weight: 600;
+    color: #455059a0;
+    font-family: monospace;
+
+}
+
+.imgcontent {
+    width: 600px;
+    border-radius: 33px;
+    background-color:transparent;
+    margin: 0 auto;
+    box-shadow: 3px 2px 10px rgba(71, 68, 68, 0.579);
+}
+
+.realname {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.realname a {
+    color: #000000db;
+    text-decoration: none;
+}
+
+.realname a:hover {
+    text-decoration: underline;
+}
+
+.leftside {
+    width: 300px;
+    height: 100vh;  
+}
+
+.leftside ul li {
+    list-style: none;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+.leftside ul li a {
+    padding: 4px 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    color: #131619;
+    text-decoration: none;
+}
+
+.leftside ul li a:hover {
+    color: #3aa1f2;
+    background-color: #e7f5fd;
+    border-radius: 22px;
+    border: 1px solid #3aa1f2;
+}
+
+
+
+
+/*signup*/
+
+
+header {
+    background-color: #3aa1f2;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    padding: 10px;
+    background-color: #3aa1f2;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+    background-image: url(/3d-twitter-application-logo_353336-98.jpg);
+    background-position: center;
+    background-size: cover;
+    border: 10px solid white;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: right;
+    font-weight: 600;
+    padding: 50px;
+    color: #fff;
+}
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 35px;
+}
+
+.hero img {
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.cta-button {
+    background-color: #fff;
+    color: #3aa1f2;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-form {
+    background-color: #f5f8fa;
+    padding: 30px 0;
+    min-height: 90vh;
+    /* Full viewport height */
+}
+
+.container {
+    width: 94%;
+    /* Adjust as needed */
+    margin: 0 auto;
+    background-color: #fff;
+    border: 2px solid #3aa1f2;
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    padding: 0 20px;
+    /* Add horizontal padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightpart {
+    width: 60%;
+    overflow: hidden;
+}
+
+.form-wrapper {
+    padding: 20px;
+    width: 50%;
+    /* Adjust as needed */
+    margin: 0 auto;
+    /* Center the form within the container */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #3aa1f2;
+    /* Color theme */
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px 20px;
+    /* Increased padding for cleaner look */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    /* Slightly rounded corners for inputs */
+    font-size: 16px;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.form-group input:focus {
+    border-color: #3aa1f2;
+    /* Highlight on focus */
+}
+
+.submit-button {
+    background-color: #3aa1f2;
+    /* Color theme */
+    color: #fff;
+    border: none;
+    padding: 15px 38px;
+    /* Adjusted padding for better fit */
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 50px;
+    margin-left: 25%;
+}
+
+.submit-button:hover {
+    background-color: #2e99df;
+    /* Darker shade on hover */
+}
+
+/* Optional enhancements: */
+h2 {
+    color: #3aa1f2;
+    /* Color theme */
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.form-group {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    /* Align labels and inputs */
+    align-items: center;
+}
+
+.form-group .lab {
+    flex: 1;
+    /* Allocate space for labels */
+}
+
+.form-group .inp {
+    flex: 2;
+    /* Allocate more space for input fields */
+}
+
+.inp div {
+    display: flex;
+    align-items: start;
+    margin-top: 13px;
+
+}
+
+.inp div label {
+    flex: 2;
+}
+
+.inp div input {
+    flex: 1;
+}
+
+.tags{
+    position: relative;
+    margin: 15px;
+    width: 285px;
+    padding-left: 1.3%;
+    padding-right: 1.3%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    border-radius: 20px;
+    height:96vh;
+    overflow: hidden;
+    box-shadow: 1px 2px 8px #362e2eb7;
+}
+.tags h3{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 24px;
+    margin-bottom: 12px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.tag{
+    border-bottom: 1px solid rgba(46, 45, 45, 0.171);
+    width: 100%;
+    height: 60px;
+    margin-bottom: 8px;
+}
+.tag1,.tag3{
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #362e2eba;
+}
+.tag2{
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #362e2e;
+    margin: 1.7px auto;
+}
+.edit{
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    padding: 3%;
+}
+
+.edit1{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.edit1 h3{
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.edit2 input{
+    width: 90px;
+    height: 32px;
+    background-color: #3aa1f2;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+.edit2 input:hover{
+    background-color: #1292f3;
+}
+.banner{
+    margin: 20px auto;
+    width: 100%;
+    position: relative;
+    margin-bottom: 100px;
+}
+.banner1 img{
+    width: 100%;
+    height: 200px;
+    filter: invert(var(--value, 100%)); --value: 16%;
+}
+.banner2 img{
+    filter: invert(var(--value, 100%)); --value: 16%;
+    width: 180px;
+    height: 180px;
+    background-color: white;
+    position: absolute;
+    bottom: -70px;
+    left: 15px;
+    border-radius: 90px;
+    border: 4px solid white;
+}
+.banner2 .binp2{
+    position: absolute;
+    left: 88px;
+    bottom: 10px;
+    cursor: pointer;
+}
+.binp2 input{
+    display: none;
+}
+.banner1 .binp1{
+    position: absolute;
+    left: 48%;
+    top: 42%;
+    cursor: pointer;
+}
+.binp1 input{
+    display: none;
+}
+
+.editcontent{
+    width: 100%;
+}
+.editcontent div{
+    width: 95%;
+    padding: 10px;
+    margin: 20px 20px;
+    background-color: #f0f3f5;
+    border-bottom: 2px solid #867f7fe9;
+}
+.editcontent label{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #867f7fe9;
+}
+.editcontent div input{
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    background-color: #f0f3f5;
+    font-size: 22px;
+}
+.ec4{
+    border: none;
+    outline: none;
+    resize: none;
+    width: 90%;
+    background-color: #f0f3f5;
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+
+
+
+.ptop{
+    height: 60px;
+    padding: 2%;
+}
+
+.ptop1 h3{
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.ptop1 p{
+    font-size: 14px;
+    color: #5d5555;
+    font-weight: 600;
+}
+.pmain{
+    margin: 20px auto;
+    width: 100%;
+    position: relative;
+    margin-bottom: 55px;
+}
+.pmain .pmain1 img{
+    width: 100%;
+    height: 200px;
+}
+.pmain2{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    width: 94%;
+}
+.pmain .pmain2 img{
+    width: 160px;
+    height: 160px;
+    background-color: white;
+    position: absolute;
+    bottom: -50px;
+    left: 15px;
+    border-radius: 90px;
+    border: 4px solid white;
+}
+.pmain2 a{
+    text-decoration: none;
+    color: #3aa1f2;
+    border: 2px solid #3aa1f2;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+.pmain2 a:hover{
+    cursor: pointer;
+    background-color: #000000;
+}
+.profile_content{
+    margin-left: 10px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    word-spacing: 1px;
+}
+.contentName{
+    font-size: 25px;
+    margin-bottom: 3px;
+}
+.contentUname,.contentJoining{
+    color: #5d5555;
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+.followORfollowing{
+    width: 100%;
+    margin-top: 40px;
+}
+.Pfollow{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 50%;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+    color: #3aa1f2;
+    font-weight: 600;
+    border: 1px solid #45414180;
+    border-bottom: 2px solid #3aa1f2;
+    cursor: pointer;
+}
+.Pfollowing{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 50%;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(147, 150, 153);
+    font-weight: 600;
+    border: 1px solid #45414180;
+    border-bottom: 2px solid #3aa1f2;
+    cursor: pointer;
+}
+
+.explorehead{
+    text-align: center;
+    margin: 15px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #3aa1f2;
+    border-bottom: 5px solid #e6ebef;
+}
+.followbox{
+    padding: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e6ebef;
+}
+.followbox:hover{
+    box-shadow: 3px 3px 10px #828689,-3px -3px 10px #9ea1a4;
+}
+.followbox1 img{
+    width: 90px;
+    height: 90px;
+}
+.followbox1{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.followbox21{
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.followbox22{
+    font-size: 12px;
+    font-weight: 600;
+    color: #7d7373;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.followbox2 .followButton{
+    text-decoration: none;
+    padding:8px 25px;
+    color: #3aa1f2;
+    font-weight: 600;
+    border: 2px solid #3aa1f2;
+    background-color: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+.Pcontent2{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.cp {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f8fa;
+  }
+  
+  .change-password {
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+  }
+  
+  .change-password__title {
+    text-align: center;
+    color: #1da1f2; /* Twitter blue */
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .change-password__error {
+    color: #e44335; /* Twitter red */
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: rgba(228, 67, 53, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group__label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333; /* Dark gray for labels */
+  }
+  
+  .change-password__form input[type="password"] {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box; /* Ensures consistent width with padding */
+  }
+  
+  .change-password__form input[type="password"]:focus {
+    border-color: #1da1f2; /* Twitter blue on focus */
+    outline: none; /* Remove default outline */
+  }
+  
+  .change-password__button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #1da1f2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .change-password__button:hover {
+    background-color: #1987da; /* Darker Twitter blue on hover */
+  }
+  
+
+
+  .delete-tweet{
+    right: 10px;
+    margin-top: 5px !important;
+    background-color: transparent;
+    position: absolute;
+    scale: 1.5;
+ }

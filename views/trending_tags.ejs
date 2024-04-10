@@ -1,0 +1,33 @@
+        <div class="tags">
+            <h3>Trends for you</h3>
+            <% for(var i=0;i<tags.length;i++){ %>
+                <div class="tag">
+                    <div class="tag1">Trending</div>
+                    <div class="tag2"><%= tags[i].tagname%></div>
+                    <div class="tag3"><%= tags[i].tag_count%> Tweets</div>
+                </div>
+            <% } %>  
+        </div>
+    </div>
+</body>
+<script>
+let el = document.getElementById(`myTextarea`);
+el.addEventListener("input", function() {
+    // Store the initial height
+    var initialHeight = el.style.height;
+
+    // Set the height to auto to calculate the correct scrollHeight
+    el.style.height = 'auto';
+
+    // Set the height to scrollHeight if it's larger than the clientHeight
+    el.style.height = Math.max(el.scrollHeight, el.clientHeight) + 'px';
+
+    // If the height decreases after deletion, reset it to initialHeight
+    if (el.scrollHeight < el.clientHeight) {
+        el.style.height = initialHeight;
+    }
+});
+
+
+</script>
+</html>

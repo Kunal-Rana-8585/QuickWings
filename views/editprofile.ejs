@@ -1,0 +1,66 @@
+<%- include('header.ejs') %>
+    <div class="home">
+        <form action="/edit_profile_submit" method="post" enctype="multipart/form-data">
+
+            <div class="edit">
+                <div class="edit1">
+                    <a href="/profile"><i class="fa-solid fa-2xl fa-xmark" style="color: #74C0FC;"></i></a>
+                    <h3>Edit profile</h3>
+                </div>
+                <div class="edit2">
+                    <input type="submit" name="save" value="Save" />
+                </div>
+            </div>
+
+            <div class="banner">
+                <div class="banner1">
+                    <img src="/header_pic/<%= result[0].headerpic %>" alt="header_pic" />
+                    <label for="inp1" class="binp1">
+                        <i class="fa-regular fa-2xl fa-image"></i>
+                        <input type="file" id="inp1" name="h_img" accept="image/*" />
+                    </label>
+                </div>
+                <div class="banner2">
+                    <img src="/profile_pic/<%= result[0].profilepic %>" alt="profile_pic" />
+                    <label for="inp2" class="binp2">
+                        <i class="fa-regular fa-2xl fa-image"></i>
+                        <input type="file" id="inp2" name="p_img" accept="image/*" />
+                    </label>
+                </div>
+            </div>
+
+            <div class="editcontent">
+                <div>
+                    <label for="ec1">
+                        First Name
+                        <br>
+                        <input type="text" id="ec1" name="fname" value="<%=result[0].fname%>" />
+                    </label>
+                </div>
+                <div>
+                    <label for="ec2">
+                        Middle Name
+                        <br>
+                        <input type="text" id="ec2" name="mname" value="<%=result[0].mname%>" />
+                    </label>
+                </div>
+                <div>
+                    <label for="ec3">
+                        Last Name
+                        <br>
+                        <input type="text" id="ec3" name="lname" value="<%=result[0].lname%>" />
+                    </label>
+                </div>
+                <div>
+                    <label for="ec4">
+                        Bio
+                        <br>
+                        <textarea maxlength="250" id="myTextarea" class="ec4" name="bio"><%=result[0].about%></textarea>
+                    </label>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <%-include('trending_tags.ejs') %>

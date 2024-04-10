@@ -1,0 +1,134 @@
+<%- include('header.ejs') %>
+    <div class="home">
+        <div class="ptop">
+            <div class="ptop1">
+                <h3>
+                    <%= result[0].fname %>
+                        <%= result[0].mname %>
+                            <%= result[0].lname %>
+                </h3>
+                <p>Tweets</p>
+            </div>
+        </div>
+
+        <div class="pmain">
+            <div class="pmain1">
+                <img src="/header_pic/<%= result[0].headerpic %>" alt="header_pic" />
+            </div>
+            <div class="pmain2">
+                <div><img src="/profile_pic/<%= result[0].profilepic %>" alt="profile_pic" /></div>
+                <div><a href="/edit_profile">Edit profile</a></div>
+            </div>
+        </div>
+
+        <div class="profile_content">
+            <div class="contentName">
+                <%= result[0].fname %>
+                    <%= result[0].mname %>
+                        <%= result[0].lname %>
+            </div>
+            <div class="contentUname">@<%= result[0].username %>
+            </div>
+            <div class="contentJoining"><i class="fa-solid fa-calendar-days"></i> Joined <%=
+                    month[result[0].dor.getMonth()] %>,<%= result[0].dor.getFullYear() %>
+            </div>
+        </div>
+
+        <div class="followORfollowing">
+            <button class="Pfollow"><i class="fa-solid fa-users"></i>&nbsp;&nbsp;Followers</button>
+            <button class="Pfollowing"><i class="fa-solid fa-user-plus"></i>&nbsp;&nbsp;Following</button>
+
+
+            <div class="Pcontent">
+                <% for(var i=0;i<follower.length;i++){ %>
+                    <div class="followbox">
+                        <div class="followbox1 leftTweet">
+                            <div class="followbox11">
+                                <img src="/profile_pic/<%= follower[i].profilepic %>" alt="profile_pic" />
+                            </div>
+                            <div class="followbox12">
+                                <div class="followbox21">
+                                    <%= follower[i].fname %>
+                                        <%= follower[i].mname %>
+                                            <%= follower[i].lname %>
+                                </div>
+                                <div class="followbox22">@<%= follower[i].username %>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="followbox2">
+                            <form action="/remove" method="post">
+                                <input type="hidden" name="removeid" value="<%= follower[i].uid %>">
+                                <button type="submit" class="followButton">Remove</button>
+                            </form>
+                        </div>
+                    </div>
+                    <% } %>
+            </div>
+            <div class="Pcontent2">
+                <% for(var i=0;i<following.length;i++){ %>
+                    <div class="followbox">
+                        <div class="followbox1 leftTweet">
+                            <div class="followbox11">
+                                <img src="/profile_pic/<%= following[i].profilepic %>" alt="profile_pic" />
+                            </div>
+                            <div class="followbox12">
+                                <div class="followbox21">
+                                    <%= following[i].fname %>
+                                        <%= following[i].mname %>
+                                            <%= following[i].lname %>
+                                </div>
+                                <div class="followbox22">@<%= following[i].username %>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="followbox2">
+                            <form action="/unfollow" method="post">
+                                <input type="hidden" name="unfollowid" value="<%= following[i].uid %>">
+                                <button type="submit" class="followButton">Unfollow</button>
+                            </form>
+                        </div>
+                    </div>
+                    <% } %>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="tags">
+        <h3>Trends for you</h3>
+        <% for(var i=0;i<tags.length;i++){ %>
+            <div class="tag">
+                <div class="tag1">Trending</div>
+                <div class="tag2">
+                    <%= tags[i].tagname%>
+                </div>
+                <div class="tag3">
+                    <%= tags[i].tag_count%> Tweets
+                </div>
+            </div>
+            <% } %>
+    </div>
+    </div>
+    </body>
+    <script>
+        document.querySelector('.Pfollow').addEventListener('click', () => {
+            document.querySelector('.Pcontent').style.display = 'block';
+            document.querySelector('.Pcontent2').style.display = 'none';
+
+            document.querySelector('.Pfollowing').style.color = 'rgb(147, 150, 153)';
+            document.querySelector('.Pfollow').style.color = '#3aa1f2';
+        });
+
+        document.querySelector('.Pfollowing').addEventListener('click', () => {
+            document.querySelector('.Pcontent2').style.display = 'block';
+            document.querySelector('.Pcontent').style.display = 'none';
+
+            document.querySelector('.Pfollow').style.color = 'rgb(147, 150, 153)';
+            document.querySelector('.Pfollowing').style.color = '#3aa1f2';
+        });
+
+    </script>
+
+    </html>
