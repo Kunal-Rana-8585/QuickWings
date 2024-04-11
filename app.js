@@ -5,9 +5,11 @@ var db = require("./database_con.js");
 var app = express();
 var multer = require("multer"); 
 var sendVerifyMail = require("./mail_send.js");
+const path = require('path');
 
 const port = process.env.PORT || 3000;
 
+app.set('views', path.join(__dirname, 'views'));
 app.use(session({ secret: "test123!@#" }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
