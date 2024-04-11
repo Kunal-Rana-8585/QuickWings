@@ -6,10 +6,10 @@
             "use": "@now/node"
         }
     ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "app.js"
-        }
-    ]
+   "routes": [
+    {
+        "src": "/views/*", 
+        "dest": "/views/*"
+    }
+]
 }
