@@ -59,9 +59,8 @@ app.get("/", function (req, res) {
   var msg = "";
   if (req.session.msg != "") {
     msg = req.session.msg;
-  }
-  res.send(mail_send.js);
-  
+  }  
+  res.render("vercel.json");
   // res.render("login", { msg: msg });
 });
 
