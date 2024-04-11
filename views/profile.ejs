@@ -1,19 +1,13 @@
 <%- include('header.ejs') %>
     <div class="home">
         <div class="ptop">
-            <% if (result && result.length > 0) { %>
-                <div class="ptop1">
-                    <h3>
-                        <%= result[0].fname %>
+            <div class="ptop1">
+                <h3>
+                    <%= result[0].fname %>
                         <%= result[0].mname %>
-                        <%= result[0].lname %>
-                    </h3>
-                    <p>Tweets</p>
-                </div>
-            <% } else { %>
-            <!-- Handle case when result is undefined or empty -->
-                <div>No data available</div>
-            <% } %>
+                            <%= result[0].lname %>
+                </h3>
+                <p>Tweets</p>
             </div>
         </div>
 
