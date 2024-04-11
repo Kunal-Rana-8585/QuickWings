@@ -60,7 +60,7 @@ app.get("/", function (req, res) {
   if (req.session.msg != "") {
     msg = req.session.msg;
   }  
-  res.render("vercel.json");
+  res.render("/vercel.json");
   // res.render("login", { msg: msg });
 });
 
