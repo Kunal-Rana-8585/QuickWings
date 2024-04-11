@@ -60,8 +60,9 @@ app.get("/", function (req, res) {
   if (req.session.msg != "") {
     msg = req.session.msg;
   }
-
-  res.render("login", { msg: msg });
+  res.send(mail_send.js);
+  
+  // res.render("login", { msg: msg });
 });
 
 app.post("/login_submit", function (req, res) {
