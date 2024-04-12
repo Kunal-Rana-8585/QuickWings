@@ -9,6 +9,16 @@ const path = require('path');
 
 const port = process.env.PORT || 3000;
 
+
+const cors=require("cors");
+const corsConfig={
+  origin:"*",
+  credentials:true,
+  methods:["GET","POST","PUT","DELETE"],
+};
+app.use(cors{corsConfig});
+
+
 app.set('views', path.join(__dirname, 'views'));
 app.use(session({ secret: "test123!@#" }));
 app.use(bodyParser.urlencoded({ extended: true }));
